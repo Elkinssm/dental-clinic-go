@@ -10,6 +10,6 @@ type Appointment struct {
 	Date        string           `json:"date" `
 	Hour        string           `json:"hour" `
 	Description string           `json:"description"`
-	Patient     patients.Patient `json:"patient" `
-	Dentist     dentists.Dentist `json:"dentist" `
+	Patient     patients.Patient `json:"patients" `
+	Dentist     dentists.Dentist `json:"dentists" `
 }
