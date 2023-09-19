@@ -57,8 +57,8 @@ Los cuales fueron desarrollados para la materia de backend 3 de la especializaci
 4. Ejecuta la aplicación.
 
 ## Coleccion de postman 
-[Colección de Postman](./dental-clinic-go/Dental_clinic_API_Go.postman_collection.json)
-[Variables de entorno Postman](./dental-clinic-go/dental_clinic_api.postman_environment.json)
+[Colección de Postman](./Dental_clinic_API_Go.postman_collection.json)
+[Variables de entorno Postman](./dental_clinic_api.postman_environment.json)
 
 ## Licencia
 
