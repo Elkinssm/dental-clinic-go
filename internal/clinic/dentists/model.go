@@ -1,4 +1,4 @@
-package dentist
+package dentists
 
 type Dentist struct {
 	ID       int    `json:"id"`

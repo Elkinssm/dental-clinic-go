@@ -1,4 +1,4 @@
-package patient
+package patients
 
 type Patient struct {
 	ID               int    `json:"id"`
