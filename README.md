@@ -45,6 +45,10 @@ Los cuales fueron desarrollados para la materia de backend 3 de la especializaci
 
 - Se utiliza una base de datos relacional PostgreSQL.
 
+### Scheme
+![image](https://github.com/Elkinssm/dental-clinic-go/assets/52393397/2276e658-b077-4385-8799-258fac66f60e)
+
+
 ## Instalación y Uso
 
 1. Clona el repositorio.
@@ -52,6 +56,9 @@ Los cuales fueron desarrollados para la materia de backend 3 de la especializaci
 3. Instala las dependencias.
 4. Ejecuta la aplicación.
 
+## Coleccion de postman 
+[Colección de Postman](./dental-clinic-go/Dental_clinic_API_Go.postman_collection.json)
+[Variables de entorno Postman](./dental-clinic-go/dental_clinic_api.postman_environment.json)
 
 ## Licencia
 
