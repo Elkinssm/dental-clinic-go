@@ -1,5 +1,10 @@
 package config
 
+import (
+	"errors"
+	"os"
+)
+
 type Config struct {
 	PublicConfig  PublicConfig
 	PrivateConfig PrivateConfig
@@ -21,11 +26,11 @@ type PrivateConfig struct {
 var (
 	envs = map[string]PublicConfig{
 		"local": {
-			PublicKey:      "local_public_key",
-			PostgresUser:   "eleven_group",
+			PublicKey:      "localAdmin",
+			PostgresUser:   "elevenGroup",
 			PostgresPort:   "5432",
 			PostgresHost:   "localhost",
-			PostgresDBName: "eleven_group_clinic",
+			PostgresDBName: "clinical_db",
 		},
 		"dev": {
 			PublicKey: "dev_public_key",
@@ -35,3 +40,29 @@ var (
 		},
 	}
 )
+
+func NewConfig(env string) (Config, error) {
+
+	publicConfig, exists := envs[env]
+	if !exists {
+		return Config{}, errors.New("env not found")
+	}
+
+	secretKey := os.Getenv("SECRET_KEY")
+	if secretKey == "" {
+		return Config{}, errors.New("secret key not found")
+	}
+
+	postgresPassword := os.Getenv("POSTGRES_PASSWORD")
+	if postgresPassword == "" {
+		return Config{}, errors.New("postgres password not found")
+	}
+
+	return Config{
+		PublicConfig: publicConfig,
+		PrivateConfig: PrivateConfig{
+			SecretKey:        secretKey,
+			PostgresPassword: postgresPassword,
+		},
+	}, nil
+}
