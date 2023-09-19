@@ -83,4 +83,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+.idea
+.vscode
 # End of https://www.toptal.com/developers/gitignore/api/go,windows,macos
